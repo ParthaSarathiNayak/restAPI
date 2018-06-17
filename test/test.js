@@ -16,7 +16,7 @@ chai.use(chaiHttp);
 //Our parent block
 describe('Students', () => {
 	beforeEach((done) => { //Before each test we empty the database
-		Book.remove({}, (err) => { 
+		Student.remove({}, (err) => { 
 		   done();		   
 		});		
 	});
@@ -46,7 +46,7 @@ describe('Students', () => {
 	  	}
 			chai.request(server)
 		    .post('/biku')
-		    .send(book)
+		    .send(stud)
 		    .end((err, res) => {
 			  	res.should.have.status(200);
 			  	res.body.should.be.a('object');
@@ -64,7 +64,7 @@ describe('Students', () => {
 	  	}
 			chai.request(server)
 		    .post('/biku')
-		    .send(book)
+		    .send(stud)
 		    .end((err, res) => {
 			  	res.should.have.status(200);
 			  	res.body.should.be.a('object');
@@ -111,7 +111,7 @@ describe('Students', () => {
 			    .end((err, res) => {
 				  	res.should.have.status(200);
 				  	res.body.should.be.a('object');
-				  	res.body.book.should.have.property('id').eql("09");
+				  	res.body.stud.should.have.property('id').eql("09");
 			      done();
 			    });
 		  });
@@ -130,7 +130,7 @@ describe('Students', () => {
             .end((err, res) => {
                   res.should.have.status(200);
                   res.body.should.be.a('object');
-                  res.body.book.should.have.property('id').eql("09");
+                  res.body.stud.should.have.property('id').eql("09");
               done();
             });
           });
