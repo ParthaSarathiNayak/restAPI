@@ -13,7 +13,7 @@ router.get('/biku', function(req, res){
     }
 
     Student.find({}).then(function(data){
-
+        res.send(data);
     }).catch((error) => {
         console.error(error.message);
         res.send({err: error.message});
