@@ -8,7 +8,7 @@ const app = express();
 
 //connect to mongodb
 mongoose.connect('mongodb://localhost/biks');
-mongoose.Promise = global.Promise;
+//mongoose.Promise = global.Promise;
 
 
 app.use(bodyParser.json());

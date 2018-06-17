@@ -16,6 +16,9 @@
     "mongoose": "^5.1.5"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
     "nodemon": "^1.17.5"
   }
 }
